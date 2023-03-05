@@ -1,9 +1,14 @@
-import { Flex, Text, useColorModeValue } from '@chakra-ui/react';
-import Link from 'next/link';
+import { Flex, useColorModeValue } from '@chakra-ui/react';
+import Image from 'next/image';
+import Logo3Black from '../../public/3transparent_black.png';
+import Logo3White from '../../public/3transparent_white.png';
 
 export default function Logo() {
+
+  const logoColor = useColorModeValue(Logo3Black, Logo3White)
+
   return (
-    <Flex
+    /*<Flex
       as={Link}
       href="/"
       fontSize="2xl"
@@ -17,6 +22,10 @@ export default function Logo() {
           app
         </Text>
       </Text>
+    </Flex>
+    */
+    <Flex>
+      <Image src={logoColor} alt="Logo" width={60} height={60} />
     </Flex>
   );
 }

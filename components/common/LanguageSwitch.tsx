@@ -2,7 +2,7 @@ import { IconButton, Menu, MenuButton, MenuItemOption, MenuList, MenuOptionGroup
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { useCallback } from 'react';
-import { FaGlobeAmericas } from 'react-icons/fa';
+import { IoLanguage } from "react-icons/io5";
 import { LocaleCode, localeNames } from '../../config/i18n';
 
 export default function LanguageSwitch() {
@@ -23,8 +23,8 @@ export default function LanguageSwitch() {
       <MenuButton
         as={IconButton}
         variant="ghost"
-        size="sm"
-        icon={<FaGlobeAmericas />}
+        size="lg"
+        icon={<IoLanguage />}
         aria-label={t('language')}
       ></MenuButton>
       <MenuList>
