@@ -21,17 +21,19 @@ export default function Footer() {
   const { t } = useTranslation('common');
 
   return (
-    <Box as="footer" bg={useColorModeValue('gray.50', 'gray.700')} px={4} py={16}>
+    <Box as="footer" bg={useColorModeValue('primary.50', 'beausoft.900')} px={4} py={16}>
       <Container maxW="5xl">
         <SimpleGrid spacing={8} columns={[1, 1, 3]}>
           <VStack align="start" spacing={3}>
+             {/*
             <Logo />
+  */}
             <HStack>
               <IconButton
                 aria-label="Twitter"
                 as="a"
-                href="mailto:contact@supastarter.dev"
-                colorScheme="primary"
+                href="mailto:richardbeauregard@beausoft.ca"
+                colorScheme={useColorModeValue('beausoft.900', 'primary.50')}
                 variant="ghost"
                 fontSize="xl"
               >
@@ -40,7 +42,7 @@ export default function Footer() {
               <IconButton
                 aria-label="Twitter"
                 as="a"
-                href="https://twitter.com/supastarter"
+                href="https://twitter.com/iamritchb"
                 colorScheme="twitter"
                 variant="ghost"
                 fontSize="xl"
@@ -48,10 +50,10 @@ export default function Footer() {
                 <FaTwitter />
               </IconButton>
             </HStack>
-            <Text color="gray.400">© by yourapp. {t('footer.allRightsReserved')}</Text>
+            <Text fontSize="xs" color={useColorModeValue('beausoft.900', 'primary.50')}>Property of 13686205 Canada Inc. {t('footer.allRightsReserved')}</Text>
           </VStack>
 
-          <Box>
+          {/*<Box>
             <Heading fontSize="base" mb={3}>
               {t('footer.links')}
             </Heading>
@@ -86,6 +88,7 @@ export default function Footer() {
               </ListItem>
             </List>
           </Box>
+          */}
         </SimpleGrid>
       </Container>
     </Box>

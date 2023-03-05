@@ -10,17 +10,17 @@ export default function Layout({
 }: PropsWithChildren<{
   pageTitle?: string;
 }>) {
-  const title = useMemo(() => `${pageTitle ? `${String(pageTitle)} - ` : ''}supastarter`, [pageTitle]);
+  const title = useMemo(() => `${pageTitle ? `${String(pageTitle)} - ` : ''}beausoft`, [pageTitle]);
 
   return (
     <>
       <Head>
         <title>{title}</title>
-        <meta name="description" content="This is a SaaS boilerplate built for supabase." />
+        <meta name="beausoft" content="beausoft Services and Development" />
         <link rel="icon" type="image/png" href="/favicon.png" />
       </Head>
       <NavBar />
-      <Box minH="100vh" pt={20}>
+      <Box h='100%' w='100%' pt={20}>
         {children}
       </Box>
       <Footer />

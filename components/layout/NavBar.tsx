@@ -18,7 +18,7 @@ export default function NavBar({ hideMenu }: { hideMenu?: boolean }) {
   const mobileDrawerDisclosure = useDisclosure();
   const isMobile = useMobileBreakpoint();
   const isTop = useScrollTop();
-  const bgColor = useColorModeValue('white', 'gray.900');
+  const bgColor = useColorModeValue('primary.50', 'beausoft.900');
 
   useEffect(() => {
     if (!isMobile && mobileDrawerDisclosure.isOpen) mobileDrawerDisclosure.onClose();
@@ -32,31 +32,35 @@ export default function NavBar({ hideMenu }: { hideMenu?: boolean }) {
         bottom="auto"
         h={20}
         as="nav"
-        bg={isTop ? 'transparent' : bgColor}
-        px={4}
-        py={6}
-        shadow={isTop ? 'none' : 'sm'}
+        bg={bgColor}
+        px={2}
+        py={2}
+        shadow='none'
         zIndex={99}
       >
         <Container maxW="5xl">
           <HStack spacing={8} justify="space-between">
             <HStack spacing={6}>
               <Logo />
+              
+              {/* 
               {!hideMenu && <Menu />}
+              */}
             </HStack>
 
             <HStack spacing={4}>
               <HStack>
-                <LanguageSwitch />
+                {/* <LanguageSwitch />*/}
                 <ColorModeSwitch />
               </HStack>
-              {user ? (
-                <UserMenu />
+              {/*{user ? (
+              <UserMenu />
               ) : (
                 <Button as={Link} href="/auth/signin" size="sm" colorScheme="primary" variant="outline">
                   {t('signIn')}
                 </Button>
               )}
+              */}
               {!hideMenu && isMobile && (
                 <IconButton aria-label={t('menu.title')} variant="outline" onClick={mobileDrawerDisclosure.onToggle}>
                   <FaBars />
